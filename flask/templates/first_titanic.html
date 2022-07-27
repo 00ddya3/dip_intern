@@ -1,0 +1,176 @@
+<!-- HTML, CSS, JS 부트스트랩 코딩 -->
+<!DOCTYPE html>
+<!-- 언어 설정 -->
+<html lang="en">
+<!-- HTML head 설정 양식 불러오기 -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - LHS </title>
+
+  <!-- CSS 양식 불러오기 -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<!-- 본문(body) 구성 -->
+<body>
+  <!-- html nav 구성, 링크, 메뉴, 인덱스 등에 활용 -->
+  <!-- 상단바 구성 -->
+  <nav class="light-blue lighten-1" role="navigation">
+    <!-- html div 구성, 레이아웃 -->
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <!-- html ul 구성, 비정렬 항목 -->
+      <ul class="right hide-on-med-and-down">
+        <!-- html li 구성, 정렬 항목 -->
+        <li><a href="#">a Navbar Link</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- 제목 및 부제 설정 -->
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">타이타닉 생존 확률 예측</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability of Survive in Titanic
+        <br>
+        </h5>
+      </div>
+
+  <!-- 수치 입력 프론트 구성 -->
+  <!-- 머신러닝 예측 -->
+  <div class="row">
+    <!-- HTML form 구성, 상호작용할 수 있는 프레임 구축, flask api에서 값을 요청받음 -->
+    <form action='/predict' method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <!-- 레이블 설정 -->
+            <label for="Sex"><b>성별</b></label>
+            <!-- 줄 바꾸기 -->
+            <br>
+          <!-- 입력값 설정 -->
+          <input   id="Sex" name='Sex'type="text" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+
+          <label for="Age"><b>나이</b></label>
+            <br>
+          <input id="Age"  name="Age" type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="Fare"><b>요금</b></label>
+            <br>
+          <input id="Fare" name="Fare" type="text" class="validate">
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+          <!-- HTML button 구성-->
+          <button type="submit" class="btn-large waves-effect waves-light orange">ML Predict</button>
+      </div>
+    </form>
+
+      </div>
+      <!-- HTML h4 구성, 제목 태그 <h1>, <h2>, <h3>, <h4>, <h5>, <h6> -->
+      <!-- flask에서 요청받은 pred 텍스트 값 레이아웃 배치 -->
+      <br><h4 align="center"<b>{{pred}}</b></h4>
+        <br>
+        <!-- 딥러닝 예측, 위 코드 반복 -->
+        <div class="row">
+          <form action='/predict2' method="POST" class="col s12">
+            <div class="row">
+              <div class="input-field col s4">
+                  <label for="Sex"><b>성별</b></label>
+                  <br>
+                <input   id="Sex" name='Sex'type="text" class="validate">
+              </div>
+              <div class="input-field col s4">
+      
+                <label for="Age"><b>나이</b></label>
+                  <br>
+                <input id="Age"  name="Age" type="text" class="validate">
+      
+              </div>
+      
+              <div class="input-field col s4">
+                  <label for="Fare"><b>요금</b></label>
+                  <br>
+                <input id="Fare" name="Fare" type="text" class="validate">
+      
+              </div>
+      
+            </div>
+      
+            <div class="row center">
+      
+                <button type="submit" class="btn-large waves-effect waves-light light-blue">DL Predict</button>
+            </div>
+          </form>
+      
+            </div>
+      
+            <br><h4 align="center"<b>{{pred2}}</b></h4>
+              <br>
+
+    </div>
+
+  </div>
+  <!-- 하단바 구성 -->
+  <div class="container">
+    <div class="section">
+
+      
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">DIP</h5>
+          <p class="grey-text text-lighten-4"> flask test test 123 test </p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- HTML Scripts, js 파일의 함수를 html에서 사용할 수 있도록 지원 -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="./static/js/materialize.js"></script>
+  <script src="./static/js/init.js"></script>
+
+  </body>
+</html>
+
